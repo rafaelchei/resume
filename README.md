@@ -4,9 +4,9 @@
 
 ## Preview
 
-[![Resume Preview](https://assets.startbootstrap.com/img/screenshots/themes/resume.png)](https://startbootstrap.github.io/startbootstrap-resume/)
+[![Resume Preview](https://github.com/rafaelchei/resume/blob/master/src/assets/img/preview.png)](https://thankful-pebble-0fc12180f.3.azurestaticapps.net/)
 
-**[View Live Preview](https://startbootstrap.github.io/startbootstrap-resume/)**
+**[View Live Preview](https://thankful-pebble-0fc12180f.3.azurestaticapps.net/)**
 
 ## Status
 
