@@ -46,14 +46,17 @@ jobs:
           cache-from: type=gha
           cache-to: type=gha,mode=max
 
-      - name: Comando de deploy
+      - name: Tag para o deploy
         run: |
           SHORT=$(git rev-parse --short HEAD)
           {
-            echo "### Deploy no k3s"
+            echo "### Deploy no k3s (Portainer)"
             echo ""
+            echo "Troque a linha da imagem em \`k8s/02-deployment.yaml\` por:"
+            echo ""
+            echo '```yaml'
+            echo "          image: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:sha-${SHORT}"
             echo '```'
-            echo "kubectl -n web set image deploy/resume resume=${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:sha-${SHORT}"
-            echo "kubectl -n web rollout status deploy/resume"
-            echo '```'
+            echo ""
+            echo "O polling do Portainer aplica em ate 5 min - ou force com Redeploy na aplicacao."
           } >> "$GITHUB_STEP_SUMMARY"
