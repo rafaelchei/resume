@@ -31,7 +31,7 @@ spec:
               app: resume
       containers:
         - name: resume
-          image: ghcr.io/rafaelchei/resume:latest
+          image: ghcr.io/rafaelchei/resume:sha-bb1b140
           imagePullPolicy: IfNotPresent
           ports:
             - name: http
