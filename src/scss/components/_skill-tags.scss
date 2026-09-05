@@ -1,0 +1,25 @@
+//
+// Skill tags
+//
+
+.skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 0;
+
+    .skill-tag {
+        display: inline-flex;
+        align-items: center;
+        padding: 0.4rem 0.9rem;
+        border-radius: 2rem;
+        background-color: fade-out($primary, 0.88);
+        color: $gray-800;
+        font-family: $font-family-base;
+        font-size: 0.95rem;
+        font-weight: 600;
+        border: 1px solid fade-out($primary, 0.6);
+    }
+}

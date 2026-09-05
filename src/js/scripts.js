@@ -26,4 +26,12 @@ window.addEventListener('DOMContentLoaded', event => {
         });
     });
 
+    // Print / save as PDF
+    const printResumeButton = document.body.querySelector('#printResume');
+    if (printResumeButton) {
+        printResumeButton.addEventListener('click', () => {
+            window.print();
+        });
+    }
+
 });

@@ -5,10 +5,21 @@ html(lang='en')
 
         meta(charset='utf-8')
         meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
-        meta(name='description', content='')
-        meta(name='author', content='')
+        meta(name='description', content='Rafael Chei — Staff Software Engineer with 20+ years of experience in .NET, C#, React/TypeScript, cloud infrastructure (Azure, AWS), and AI/RAG applications. View my experience, certifications, and skills.')
+        meta(name='author', content='Rafael Chei')
+        meta(name='keywords', content='Rafael Chei, Software Engineer, .NET Developer, C# Developer, React, Azure, AWS, Cloud Engineer, RAG, AI Engineer, Resume, CV')
+        meta(name='theme-color', content='#38bd6b')
 
-        title Resume - Rafael Chei
+        title Rafael Chei — Staff Software Engineer | Resume
+
+        link(rel='canonical', href='https://chei.dev/')
+
+        // Open Graph / social preview
+        meta(property='og:type', content='profile')
+        meta(property='og:title', content='Rafael Chei — Staff Software Engineer')
+        meta(property='og:description', content='20+ years of experience designing, developing, and scaling applications in cloud, mobile, and AI-powered environments.')
+        meta(property='og:image', content='assets/img/preview.png')
+        meta(property='og:url', content='https://chei.dev/')
 
         link(rel='icon', type='image/x-icon', href='assets/img/favicon.ico')
 
@@ -22,6 +33,26 @@ html(lang='en')
         // Core theme CSS (includes Bootstrap)
         link(href='css/styles.css', rel='stylesheet')
 
+        // Structured data for search engines (schema.org Person)
+        script(type='application/ld+json').
+            {
+                "@context": "https://schema.org",
+                "@type": "Person",
+                "name": "Rafael Chei",
+                "jobTitle": "Staff Software Engineer",
+                "url": "https://chei.dev/",
+                "email": "mailto:faelchei@gmail.com",
+                "address": {
+                    "@type": "PostalAddress",
+                    "addressLocality": "Oakland",
+                    "addressRegion": "FL",
+                    "addressCountry": "US"
+                },
+                "sameAs": [
+                    "https://www.linkedin.com/in/rafaelchei/"
+                ]
+            }
+
     body#page-top
 
         // Navigation
@@ -29,7 +60,7 @@ html(lang='en')
             a.navbar-brand.js-scroll-trigger(href='#page-top')
                 span.d-block.d-lg-none Rafael Chei
                 span.d-none.d-lg-block
-                    img.img-fluid.img-profile.rounded-circle.mx-auto.mb-2(src='assets/img/profile.jpg', alt='...')
+                    img.img-fluid.img-profile.rounded-circle.mx-auto.mb-2(src='assets/img/profile.jpg', alt='Rafael Chei')
             button.navbar-toggler(type='button', data-bs-toggle='collapse', data-bs-target='#navbarResponsive', aria-controls='navbarResponsive', aria-expanded='false', aria-label='Toggle navigation')
                 span.navbar-toggler-icon
             #navbarResponsive.collapse.navbar-collapse
@@ -40,10 +71,8 @@ html(lang='en')
                         a.nav-link.js-scroll-trigger(href='#experience') Experience
                     li.nav-item
                         a.nav-link.js-scroll-trigger(href='#education') Education
-                    //- li.nav-item
-                    //-     a.nav-link.js-scroll-trigger(href='#skills') Skills
-                    //- li.nav-item
-                    //-     a.nav-link.js-scroll-trigger(href='#interests') Interests
+                    li.nav-item
+                        a.nav-link.js-scroll-trigger(href='#skills') Skills
                     li.nav-item
                         a.nav-link.js-scroll-trigger(href='#awards') Certifications
 
@@ -54,16 +83,30 @@ html(lang='en')
             section#about.resume-section
                 .resume-section-content
                     h1.mb-0
-                        | Rafael 
+                        | Rafael
                         span.text-primary Chei
-                    .subheading.mb-5
-                        | Oakland · Florida · United States
-                        a(href='mailto:faelchei@gmail.com') faelchei@gmail.com
-                    p.lead.mb-5
-                        | Software Engineer with 20+ years of experience in designing, developing, and scaling applications in cloud and mobile environments. Extensive experience developing complex systems, improving technical workflows, and contributing to cross-functional projects. Strong background in .NET, cloud infrastructure, DevOps, and modern web/mobile technologies.
-                    .social-icons
-                        a.social-icon(href='https://www.linkedin.com/public-profile/settings?trk=d_flagship3_profile_self_view_public_profile')
-                            i.fab.fa-linkedin-in
+                    .tagline.mb-3 Staff Software Engineer
+                    .subheading.contact-line.mb-5
+                        span.contact-item
+                            i.fas.fa-map-marker-alt
+                            |  Oakland, FL
+                        span.contact-item
+                            a(href='mailto:faelchei@gmail.com')
+                                i.fas.fa-envelope
+                                |  faelchei@gmail.com
+                        span.contact-item
+                            a(href='https://chei.dev/', target='_blank', rel='noopener noreferrer')
+                                i.fas.fa-globe
+                                |  chei.dev
+                    p.lead.mb-4
+                        | Experienced Staff Software Engineer with 20+ years of experience in designing, developing, and scaling applications in cloud and mobile environments. Extensive experience developing complex systems, improving technical workflows, and contributing to cross-functional projects. Strong background in .NET, cloud infrastructure, DevOps, and modern web/mobile technologies.
+                    .d-flex.align-items-center.flex-wrap.gap-3
+                        .social-icons
+                            a.social-icon(href='https://www.linkedin.com/in/rafaelchei/', target='_blank', rel='noopener noreferrer', aria-label='LinkedIn')
+                                i.fab.fa-linkedin-in
+                        button#printResume.btn.btn-outline-primary(type='button')
+                            i.fas.fa-file-pdf.me-2
+                            | Download / Print Resume
 
             hr.m-0
 
@@ -75,101 +118,44 @@ html(lang='en')
                     .d-flex.flex-column.flex-md-row.justify-content-between.mb-5
                         .flex-grow-1
                             h3.mb-0 Staff Software Engineer
-                            .subheading.mb-3 Genius SIS
-                            p
-                                | 
+                            .subheading.mb-3 Genius SIS, Inc. — Remote (HQ: Plantation, FL)
+                            ul.bullet-list
+                                li Migrated a legacy ASP.NET application to .NET 9 Web API and React, improving performance, scalability, and code maintainability.
+                                li Created a Retrieval-Augmented Generation (RAG) AI application leveraging Genius product documentation to enhance information retrieval and user support.
+                                li Trained a custom AI model to accurately extract invoice data from PDF and image documents, improving processing automation.
                         .flex-shrink-0
                             span.text-primary Jun 2022 - Present
 
                     .d-flex.flex-column.flex-md-row.justify-content-between.mb-5
                         .flex-grow-1
                             h3.mb-0 Senior Software Engineer
-                            .subheading.mb-3 Genius SIS
-                            p
-                                | 
+                            .subheading.mb-3 Genius SIS, Inc. — Plantation, FL
+                            ul.bullet-list
+                                li Developed mission-critical SIS features and APIs; integrated third-party platforms.
+                                li Modernized the frontend using React and TypeScript; improved UI performance and accessibility.
+                                li Introduced Hangfire to handle background processing, preventing web application freezes caused by data-intensive operations.
                         .flex-shrink-0
-                            span.text-primary Mar 2018
+                            span.text-primary Mar 2018 - May 2022
 
                     .d-flex.flex-column.flex-md-row.justify-content-between.mb-5
                         .flex-grow-1
-                            h3.mb-0 Mobile Specialist in Digital Platforms
-                            .subheading.mb-3 Digio Bank
-                            p
-                                | 
+                            h3.mb-0 Mobile Platform Specialist (iOS)
+                            .subheading.mb-3 Banco (Digio) — São Paulo, Brazil
+                            ul.bullet-list
+                                li Led iOS development using Swift and Objective-C for digital banking apps with thousands of users.
+                                li Delivered features such as biometric login, push notifications, and secure authentication.
                         .flex-shrink-0
-                            span.text-primary Sep 2016
+                            span.text-primary Sep 2016 - Mar 2018
 
                     .d-flex.flex-column.flex-md-row.justify-content-between.mb-5
                         .flex-grow-1
-                            h3.mb-0 System Analyst III (C#, Obj-C, Swift)
-                            .subheading.mb-3 Conductor Technology in Payment Methods
-                            p
-                                | 
+                            h3.mb-0 Earlier Engineering Roles (Brazil)
+                            .subheading.mb-3 Conductor, Serasa Experian, ILATI, Accentiv, Emphasys
+                            ul.bullet-list
+                                li Held progressive roles from intern to senior engineer building .NET and mobile apps in fintech and enterprise environments.
+                                li Technologies: C#, VB.NET, SQL Server, Objective-C, Swift, ASP.NET, WinForms.
                         .flex-shrink-0
-                            span.text-primary Jun 2015
-
-                    .d-flex.flex-column.flex-md-row.justify-content-between.mb-5
-                        .flex-grow-1
-                            h3.mb-0 System Analyst I (C#, Obj-C, Swift)
-                            .subheading.mb-3 Conductor Technology in Payment Methods
-                            p
-                                | 
-                        .flex-shrink-0
-                            span.text-primary Jul 2013
-
-                    .d-flex.flex-column.flex-md-row.justify-content-between.mb-5
-                        .flex-grow-1
-                            h3.mb-0 System Analyst III (C#)
-                            .subheading.mb-3 Accentiv Serviços Tecnologia da Informação S/A
-                            p
-                                | 
-                        .flex-shrink-0
-                            span.text-primary Jan 2013
-
-                    .d-flex.flex-column.flex-md-row.justify-content-between.mb-5
-                        .flex-grow-1
-                            h3.mb-0 System Analyst (C#)
-                            .subheading.mb-3 Ilati - Instituto Latino Americano de Tecnologia da Informação
-                            p
-                                | 
-                        .flex-shrink-0
-                            span.text-primary Sep 2011
-
-                    .d-flex.flex-column.flex-md-row.justify-content-between.mb-5
-                        .flex-grow-1
-                            h3.mb-0 System Support Analyst Senior
-                            .subheading.mb-3 Serasa Experian
-                            p
-                                | 
-                        .flex-shrink-0
-                            span.text-primary May 2011
-
-                    .d-flex.flex-column.flex-md-row.justify-content-between.mb-5
-                        .flex-grow-1
-                            h3.mb-0 System Analyst PL (C#, VBNet)
-                            .subheading.mb-3 Serasa Experian
-                            p
-                                | 
-                        .flex-shrink-0
-                            span.text-primary Feb 2008
-
-                    .d-flex.flex-column.flex-md-row.justify-content-between.mb-5
-                        .flex-grow-1
-                            h3.mb-0 System Analyst Jr (C#, VBNet)
-                            .subheading.mb-3 Serasa Experian
-                            p
-                                | 
-                        .flex-shrink-0
-                            span.text-primary Jan 2007
-
-                    .d-flex.flex-column.flex-md-row.justify-content-between.mb-5
-                        .flex-grow-1
-                            h3.mb-0 Intern Software Developer (.NET, C#)
-                            .subheading.mb-3 Emphasys IT Services
-                            p
-                                | 
-                        .flex-shrink-0
-                            span.text-primary 2004
+                            span.text-primary 2004 - 2016
 
 
             hr.m-0
@@ -182,7 +168,7 @@ html(lang='en')
                     .d-flex.flex-column.flex-md-row.justify-content-between.mb-5
                         .flex-grow-1
                             h3.mb-0 Universidade Presbiteriana Mackenzie
-                            .subheading.mb-3 Bachelor of Information Systems
+                            .subheading.mb-3 Bachelor of Computer Information Systems
                             div Emphasis on Database
                         .flex-shrink-0
                             span.text-primary 2004 - 2009
@@ -190,66 +176,59 @@ html(lang='en')
             hr.m-0
 
             // Skills
-            //- section#skills.resume-section
-            //-     .resume-section-content
-            //-         h2.mb-5 Skills
-            //-         .subheading.mb-3 Programming Languages & Tools
-            //-         ul.list-inline.dev-icons
-            //-             li.list-inline-item
-            //-                 i.fab.fa-html5
-            //-             li.list-inline-item
-            //-                 i.fab.fa-css3-alt
-            //-             li.list-inline-item
-            //-                 i.fab.fa-js-square
-            //-             li.list-inline-item
-            //-                 i.fab.fa-angular
-            //-             li.list-inline-item
-            //-                 i.fab.fa-react
-            //-             li.list-inline-item
-            //-                 i.fab.fa-node-js
-            //-             li.list-inline-item
-            //-                 i.fab.fa-sass
-            //-             li.list-inline-item
-            //-                 i.fab.fa-less
-            //-             li.list-inline-item
-            //-                 i.fab.fa-wordpress
-            //-             li.list-inline-item
-            //-                 i.fab.fa-gulp
-            //-             li.list-inline-item
-            //-                 i.fab.fa-grunt
-            //-             li.list-inline-item
-            //-                 i.fab.fa-npm
-            //-         .subheading.mb-3 Workflow
-            //-         ul.fa-ul.mb-0
-            //-             li
-            //-                 span.fa-li
-            //-                     i.fas.fa-check
-            //-                 | Mobile-First, Responsive Design
-            //-             li
-            //-                 span.fa-li
-            //-                     i.fas.fa-check
-            //-                 | Cross Browser Testing & Debugging
-            //-             li
-            //-                 span.fa-li
-            //-                     i.fas.fa-check
-            //-                 | Cross Functional Teams
-            //-             li
-            //-                 span.fa-li
-            //-                     i.fas.fa-check
-            //-                 | Agile Development & Scrum
+            section#skills.resume-section
+                .resume-section-content
+                    h2.mb-5 Skills
 
-            //- hr.m-0
+                    .skill-group.mb-4
+                        .subheading.mb-3 Languages & Frameworks
+                        ul.skill-tags
+                            li.skill-tag C#
+                            li.skill-tag .NET / .NET Core
+                            li.skill-tag React
+                            li.skill-tag TypeScript
+                            li.skill-tag JavaScript
+                            li.skill-tag Java
+                            li.skill-tag SQL
+                            li.skill-tag WCF / REST APIs
 
-            // Interests
-            //- section#interests.resume-section
-            //-     .resume-section-content
-            //-         h2.mb-5 Interests
-            //-         p
-            //-             | Apart from being a web developer, I enjoy most of my time being outdoors. In the winter, I am an avid skier and novice ice climber. During the warmer months here in Colorado, I enjoy mountain biking, free climbing, and kayaking.
-            //-         p.mb-0
-            //-             | When forced indoors, I follow a number of sci-fi and fantasy genre movies and television shows, I am an aspiring chef, and I spend a large amount of my free time exploring the latest technology advancements in the front-end web development world.
+                    .skill-group.mb-4
+                        .subheading.mb-3 Cloud & DevOps
+                        ul.skill-tags
+                            li.skill-tag Microsoft Azure
+                            li.skill-tag AWS
+                            li.skill-tag Azure DevOps
+                            li.skill-tag GitHub Actions
+                            li.skill-tag Terraform
+                            li.skill-tag Docker
 
-            //- hr.m-0
+                    .skill-group.mb-4
+                        .subheading.mb-3 AI / Machine Learning
+                        ul.skill-tags
+                            li.skill-tag Retrieval-Augmented Generation (RAG)
+                            li.skill-tag Custom Model Training
+
+                    .skill-group.mb-4
+                        .subheading.mb-3 Mobile Development
+                        ul.skill-tags
+                            li.skill-tag Swift
+                            li.skill-tag Objective-C
+
+                    .skill-group.mb-4
+                        .subheading.mb-3 Soft Skills
+                        ul.skill-tags
+                            li.skill-tag Problem Solving
+                            li.skill-tag Continuous Learning
+                            li.skill-tag Cross-Functional & Remote Collaboration
+
+                    .skill-group
+                        .subheading.mb-3 Languages
+                        ul.skill-tags
+                            li.skill-tag English (Full Professional)
+                            li.skill-tag Portuguese (Native)
+                            li.skill-tag Spanish (Intermediate)
+
+            hr.m-0
 
             // Awards
             section#awards.resume-section
